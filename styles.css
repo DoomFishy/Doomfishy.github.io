@@ -18,16 +18,25 @@ hr {
 /* Navbar */
 
 #navbar {
-    position: fixed;
     width: 100%;
     z-index: 20;
+    background-color: #d9005f;
+    border-bottom: 10px solid #ff7f00;
+
+    /*
+    border-bottom: 100px solid;
+ 
+    border-image: url("assets/removed_bg/border_line_1.png");
+    border-image-slice: 147; 
+    */
+    
 }
 
 #nav-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+
     padding: 0px;
     margin: 0px;
 }
@@ -36,7 +45,7 @@ hr {
     display: block;
     text-decoration: none;
     color: white;
-    padding: 30px;
+    padding: 50px;
     font-weight: bold;
     font-size: 20px;
     
@@ -56,15 +65,23 @@ hr {
     flex-direction: column;
     background-color: #F4F7F5;
     color: #00819f;
-    padding: 50vh 0;
+    padding: 25vh 0;
 }
 
+/*
 #border{
     padding: 15px;
     border: 100px solid;
-    border-image: url("assets/border_test_2.png");
-    border-image-slice: 24;
+    border-image: url("assets/removed_bg/border_line_1.png");
+    border-image-slice: 147;
+    opacity: 0;
+    transition: opacity 0.1s;
 }
+
+#border.ready{
+    opacity:1;
+}
+*/
 
 #border > h1 {
     padding: 0 10%;
