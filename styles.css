@@ -21,7 +21,7 @@ hr {
     width: 100%;
     z-index: 20;
     background-color: #d9005f;
-    border-bottom: 10px solid #ff7f00;
+    border-bottom: 0.625rem solid #ff7f00;
 
     /*
     border-bottom: 100px solid;
@@ -47,7 +47,7 @@ hr {
     color: white;
     padding: 50px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     
     background-color: #d9005f;
     transition: 0.3s;
@@ -65,7 +65,31 @@ hr {
     flex-direction: column;
     background-color: #F4F7F5;
     color: #00819f;
-    padding: 25vh 0;
+    padding: 20rem 0;
+}
+
+#welcome-section > h1{
+    text-align: center;
+    font-size: 6.25rem;
+}
+
+#welcome-section > p{
+    text-align: center;
+    font-size: 1.563rem;
+}
+
+/* Description */
+#description-section{
+}
+
+#description-list{
+    list-style: inside;
+    color: #00819f;
+    font-size: 1.5rem;
+}
+
+#description-list > li{
+    padding: 1rem 0;
 }
 
 /*
@@ -81,7 +105,7 @@ hr {
 #border.ready{
     opacity:1;
 }
-*/
+
 
 #border > h1 {
     padding: 0 10%;
@@ -96,97 +120,8 @@ hr {
     margin: 0 auto;
 }
 
-/* Projects */
+*/
 
-#projects {
-    text-align: center;
-    color: #00819f;
-    font-size: 20px;
-    background-color: #F4F7F5;
-    padding: 100px 0px;
-}
-
-#project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-#projects > h1 {
-    padding-bottom: 100px;
-    font-size: 45px;
-}
-
-.project-tile {
-    transform: translateY(5px);
-    transition: 0.3s;
-}
-
-.project-tile:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
-}
-
-.project-tile a {
-    display: block;
-}
-
-.project-image img{
-    object-fit: cover;
-    width: 100%;
-    border: 5px solid #87ea00;
-    border-radius: 15px;
-    opacity: 1;
-    transition: 0.3s;
-}
-
-.project-image img:hover {
-    border: 5px solid #ff7f00;
-}
-
-.image-title {
-    padding-top: 10px;
-    font-weight: bold;
-}
-
-
-/* Contacts */
-
-#contacts {
-    text-align: center;
-    color: #00819f;
-    font-size: 20px;
-    background-color: #F4F7F5;
-    padding: 100px 0px;
-}
-
-#contacts > h1 {
-    font-size: 45px;
-}
-
-#contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 250px;
-}
-
-.contact-tile a img{
-    border: 5px solid #87ea00;
-    transition: 0.3s;
-    width: 30%;
-    border-radius: 15px;
-
-}
-
-.contact-tile a img:hover{
-    border: 5px solid #ff7f00;
-    transform: scale(1.1);
-    transition: 0.3s;
-}
 
 /* Footer */
 
