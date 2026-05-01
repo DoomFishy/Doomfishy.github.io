@@ -1,6 +1,8 @@
 body {
     font-family: Poppins, sans-serif;
     margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: #f4f7f5;
 }
 
@@ -9,17 +11,35 @@ body {
     margin: 0;
 }
 
-hr {
+#hr-green {
+    background-color:#87ea00;
+    height: 0.625rem;
+    border: 0px;
+}
+
+#hr-blue {
+    background-color:#00819f;
+    height: 0.625rem;
+    border: 0px;
+}
+
+#hr-orange {
     background-color:#ff7f00;
     height: 0.625rem;
     border: 0px;
 }
 
+#hr-red {
+    background-color:#d9005f;
+    height: 0.625rem;
+    border: 0px;
+}
+
+
 /* Navbar */
 
 #navbar {
     width: 100%;
-    z-index: 20;
     background-color: #d9005f;
     border-bottom: 0.625rem solid #ff7f00;
 
@@ -65,32 +85,135 @@ hr {
     flex-direction: column;
     background-color: #F4F7F5;
     color: #00819f;
-    padding: 20rem 0;
+    padding: 10rem 0;
 }
 
 #welcome-section > h1{
-    text-align: center;
+    text-align: left;
     font-size: 6.25rem;
+    padding: 0 10rem;
 }
 
 #welcome-section > p{
-    text-align: center;
+    text-align: left;
     font-size: 1.563rem;
+    padding: 2rem 10rem;
+
 }
 
 /* Description */
-#description-section{
+#about-section{
+    padding: 10rem 0;
 }
 
-#description-list{
+#about-list{
     list-style: inside;
     color: #00819f;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    padding: 0 5rem;
 }
 
-#description-list > li{
+#about-list > li{
     padding: 1rem 0;
 }
+
+/* Projects */
+
+#project-section{
+    text-align: center;
+    font-size: 1.625rem;
+}
+
+#project-section > h1{
+    text-align: center;
+    color: #00819f;
+    margin-top: 2rem;
+}
+
+#project-container{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#gamejam-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1.5rem 0;
+
+}
+
+.gamejam-tile{
+    padding: 1.5rem 0;
+    margin: 1.8rem;
+}
+
+.gamejam-image img{
+    width: 315px;
+    height: 250px;
+    border: 0.8rem solid #87ea00;
+    border-radius: 0.625rem;
+
+}
+
+.gamejam-title{
+    font-weight: Bold;
+    padding: 1rem 0;
+    color: black;
+}
+
+.gamejam-description{
+    font-size: 1.2rem;
+}
+
+#current-section{
+    padding: 16rem 5rem;
+}
+
+#current-section > h1{
+    font-size: 2.5rem;
+    color:#87ea00;
+}
+
+#current-section > p{
+    font-size: 2.5rem;
+    color: #00819f;
+}
+
+#contacts {
+  text-align: center;
+  color: #00819f;
+  font-size: 20px;
+  background-color: #F4F7F5;
+  padding: 10rem 0px;
+}
+
+#contacts > h1 {
+  font-size: 50px;
+}
+
+#contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 250px;
+}
+
+.contact-tile a img{
+  border: 5px solid #87ea00;
+  transition: 0.3s;
+  width: 30%;
+  border-radius: 15px;
+
+}
+
+.contact-tile a img:hover{
+  border: 5px solid #ff7f00;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 
 /*
 #border{
@@ -126,9 +249,10 @@ hr {
 /* Footer */
 
 footer {
+
+    padding: 2%;
     font-family: Poppins, sans-serif;
     background-color: #d9005f;
-    padding: 2%;
     border-top: 5px solid #00819f;
 }
 
