@@ -4,11 +4,14 @@ body {
     padding: 0;
     height: 100%;
     background-color: #f4f7f5;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+main{
+    flex: 1;
 }
 
 #hr-green {
@@ -85,7 +88,7 @@ body {
     flex-direction: column;
     background-color: #F4F7F5;
     color: #00819f;
-    padding: 10rem 0;
+    padding: 5rem 0;
 }
 
 #welcome-section > h1{
@@ -97,7 +100,7 @@ body {
 #welcome-section > p{
     text-align: left;
     font-size: 1.563rem;
-    padding: 2rem 10rem;
+    padding: 0 10rem;
 
 }
 
@@ -114,7 +117,7 @@ body {
 }
 
 #about-list > li{
-    padding: 1rem 0;
+    margin: 2rem 0;
 }
 
 /* Projects */
@@ -127,7 +130,6 @@ body {
 #project-section > h1{
     text-align: center;
     color: #00819f;
-    margin-top: 2rem;
 }
 
 #project-container{
@@ -167,10 +169,6 @@ body {
     font-size: 1.2rem;
 }
 
-#current-section{
-    padding: 16rem 5rem;
-}
-
 #current-section > h1{
     font-size: 2.5rem;
     color:#87ea00;
@@ -186,7 +184,6 @@ body {
   color: #00819f;
   font-size: 20px;
   background-color: #F4F7F5;
-  padding: 10rem 0px;
 }
 
 #contacts > h1 {
@@ -249,7 +246,6 @@ body {
 /* Footer */
 
 footer {
-
     padding: 2%;
     font-family: Poppins, sans-serif;
     background-color: #d9005f;

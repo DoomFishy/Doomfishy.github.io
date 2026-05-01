@@ -39,4 +39,4 @@ function change_page(event){
     }
 }
 
-loadHtmlFile("contact_page.html");
+loadHtmlFile("about_page.html");
