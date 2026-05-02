@@ -6,8 +6,6 @@ navList.forEach(item =>{
 });
 
 
-
-
 async function loadHtmlFile(filePath){
     try{
         const response = await fetch(filePath);
@@ -38,5 +36,6 @@ function change_page(event){
         loadHtmlFile("contact_page.html");
     }
 }
+
 
 loadHtmlFile("about_page.html");

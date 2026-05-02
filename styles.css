@@ -38,6 +38,16 @@ main{
     border: 0px;
 }
 
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 
 /* Navbar */
 
@@ -68,9 +78,9 @@ main{
     display: block;
     text-decoration: none;
     color: white;
-    padding: 50px;
+    padding: 50px 100px;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.55rem;
     
     background-color: #d9005f;
     transition: 0.3s;
@@ -89,6 +99,7 @@ main{
     background-color: #F4F7F5;
     color: #00819f;
     padding: 5rem 0;
+    animation: fadeIn 0.2s;
 }
 
 #welcome-section > h1{
@@ -107,17 +118,61 @@ main{
 /* Description */
 #about-section{
     padding: 10rem 0;
-}
-
-#about-list{
-    list-style: inside;
     color: #00819f;
     font-size: 1.6rem;
     padding: 0 5rem;
+    animation: fadeIn 0.2s;
 }
 
-#about-list > li{
+
+#about-section > div{
     margin: 2rem 0;
+}
+
+.about-item{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.languages{
+    align-items: center;
+    gap: 50px;
+}
+
+.yu_logo{
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.java_logo{
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.python_logo{
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.csharp_logo{
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.c_logo{
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#colour_logo{
+    width: 75px;
+    height: auto;
 }
 
 /* Projects */
@@ -125,6 +180,7 @@ main{
 #project-section{
     text-align: center;
     font-size: 1.625rem;
+    animation: fadeIn 0.2s;
 }
 
 #project-section > h1{
@@ -169,21 +225,31 @@ main{
     font-size: 1.2rem;
 }
 
+#current_section{
+    animation: fadeIn 0.2s;
+}
+
 #current-section > h1{
     font-size: 2.5rem;
     color:#87ea00;
+    animation: fadeIn 0.2s;
 }
 
 #current-section > p{
     font-size: 2.5rem;
     color: #00819f;
+    animation: fadeIn 0.2s;
+}
+
+#contact-section{
+    animation: fadeIn 0.2s;
 }
 
 #contacts {
-  text-align: center;
-  color: #00819f;
-  font-size: 20px;
-  background-color: #F4F7F5;
+    text-align: center;
+    color: #00819f;
+    font-size: 20px;
+    background-color: #F4F7F5;
 }
 
 #contacts > h1 {
@@ -191,24 +257,24 @@ main{
 }
 
 #contact-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 250px;
 }
 
 .contact-tile a img{
-  border: 5px solid #87ea00;
-  transition: 0.3s;
-  width: 30%;
-  border-radius: 15px;
+    border: 5px solid #87ea00;
+    transition: 0.3s;
+    width: 30%;
+    border-radius: 15px;
 
 }
 
 .contact-tile a img:hover{
-  border: 5px solid #ff7f00;
-  transform: scale(1.1);
-  transition: 0.3s;
+    border: 5px solid #ff7f00;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 
