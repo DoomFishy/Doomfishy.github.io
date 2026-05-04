@@ -115,6 +115,14 @@ main{
 
 }
 
+#description{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* Description */
 #about-section{
     padding: 10rem 0;
@@ -124,36 +132,55 @@ main{
     animation: fadeIn 0.2s;
 }
 
-
 #about-section > div{
     margin: 2rem 0;
 }
 
-.about-item{
-    display: flex;
-    align-items: center;
-    gap: 50px;
+#about-section > h1{
+    text-align: center;
 }
 
-.languages{
+.about-item > p,img{
+    display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
+    justify-content: center;
+}
+
+#languages{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    justify-items: center;
+}
+
+#language_imbalance{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+
+.language-tile{
+    text-align: center;
+    color: #272728;
+    font-weight: bold;
 }
 
 .yu_logo{
-    width: 100px;
+    width: 80px;
     height: auto;
     flex-shrink: 0;
 }
 
 .java_logo{
-    width: 120px;
+    width: 140px;
     height: auto;
     flex-shrink: 0;
 }
 
 .python_logo{
-    width: 120px;
+    width: 140px;
     height: auto;
     flex-shrink: 0;
 }
@@ -198,22 +225,30 @@ main{
 #gamejam-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 1.5rem 0;
+    justify-items: center;
 
-}
-
-.gamejam-tile{
     padding: 1.5rem 0;
     margin: 1.8rem;
+
 }
+
 
 .gamejam-image img{
     width: 315px;
     height: 250px;
     border: 0.8rem solid #87ea00;
     border-radius: 0.625rem;
+    margin: auto;
+    transition: 0.3s;
 
 }
+
+.gamejam-tile a img:hover{
+    border: 5px solid #ff7f00;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 
 .gamejam-title{
     font-weight: Bold;
@@ -260,14 +295,14 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0 250px;
 }
 
 .contact-tile a img{
-    border: 5px solid #87ea00;
     transition: 0.3s;
-    width: 30%;
+    width: 50%;
     border-radius: 15px;
+    margin: auto;
+    transition: 0.3s;
 
 }
 
