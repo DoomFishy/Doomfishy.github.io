@@ -5,7 +5,6 @@ navList.forEach(item =>{
     item.addEventListener("click", change_page)
 });
 
-
 async function loadHtmlFile(filePath){
     try{
         const response = await fetch(filePath);
