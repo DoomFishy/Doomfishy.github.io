@@ -38,4 +38,4 @@ function change_page(event){
 }
 
 
-loadHtmlFile("current_page.html");
+loadHtmlFile("about_page.html");
