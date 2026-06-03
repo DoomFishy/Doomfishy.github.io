@@ -55,11 +55,29 @@ a {
     }
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Navbar */
 
 #navbar {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 2vh;
+
     background-color: #d9005f;
     border-bottom: 0.625rem solid #ff7f00;
 }
@@ -67,17 +85,17 @@ a {
 #nav-list {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
 
     padding: 0;
     margin: 0;
 }
 
+#nav-item {
+}
+
 #nav-list a {
-    display: block;
     text-decoration: none;
     color: white;
-    padding: 3.125rem 6.25rem;
     font-weight: bold;
     font-size: 1.55rem;
     
