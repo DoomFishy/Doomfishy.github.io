@@ -72,6 +72,11 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 2%;
+}
+
+.title h1 {
+    color: #d9005f;
 }
 
 
@@ -195,13 +200,14 @@ hr {
     animation: fadeIn 0.2s;
 }
 
-#about-section > div{
-    margin: 4% 0;
+.description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
 
-#about-section > h1{
-    text-align: center;
-}
 
 .about-item > p,img{
     display: flex;
