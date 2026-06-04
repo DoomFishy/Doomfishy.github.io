@@ -17,7 +17,6 @@ async function loadHtmlFile(filePath){
 
 function change_page(event){
     const name = event.target.textContent;
-    console.log("CLICKED!", name);
 
     if (name == "About"){
         loadHtmlFile("about_page.html");
@@ -37,4 +36,4 @@ function change_page(event){
 }
 
 
-loadHtmlFile("project_page.html");
+loadHtmlFile("about_page.html");
