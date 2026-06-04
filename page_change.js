@@ -37,4 +37,4 @@ function change_page(event){
 }
 
 
-loadHtmlFile("about_page.html");
+loadHtmlFile("project_page.html");
