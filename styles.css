@@ -204,7 +204,6 @@ hr {
 
     margin: 0 10%;
     width: 30%;
-
 }
 
 /* Description */
@@ -291,6 +290,51 @@ hr {
     height: auto;
 }
 
+/* Dialog */
+
+#preview {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+#preview-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 60%;
+    height: 50%;
+    color: white;
+}
+
+#preview-tech {
+    padding-left: 5%;
+
+}
+
+#preview-description {
+    padding-left: 5%;
+}
+
+#preview-thumbnail {
+    width: 30%;
+}
+
+#preview-thumbnail img {
+    border: 0.3rem solid #ff7f00;
+    border-radius: 2%;
+    width: 100%;
+    background-color: white;
+    
+}
+
 /* Projects */
 
 #project-section {
@@ -342,9 +386,6 @@ hr {
     font-weight: lighter;
     font-size: clamp(0.6rem, 1.2vw, 1rem);
 }
-
-
-
 
 .project-list > li{
     padding-bottom: 1.5%;
