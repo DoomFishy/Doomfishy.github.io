@@ -1,0 +1,40 @@
+<section id="preview-container" class="border-blue">
+    
+    <div id="preview-title">
+        <h1>Memory Management Unit (MMU) Simulator</h1>
+    </div>
+    
+    <div id="preview-content-row">
+        <div id="preview-thumbnail">
+            <img draggable="false" src="assets/diagram/MMU_diagram.png">
+        </div>
+
+        <section id="preview-writing">
+            <div id="preview-tech">
+                <p> <em> C | Page Tables | LRU | TLB | Demand Paging </em> </p>
+            </div>
+
+            <div id="preview-description">
+                <p>
+                    The program simulates virtual address translation.
+                    It splits logical addresses into page numbers and offsets, then uses a TLB and page table to find the
+                    physical frame.
+                    On a page fault, it loads the missing 256-byte page from a backing store file into the physical memory
+                    using LRU replacement.
+                    It then computes the physical address, reads the signed byte value, and outputs the results with hit and
+                    fault rates to CSV files.
+                </p>
+            </div>
+        </section>
+
+        <section id="preview-features">
+            <p>Key features implemented</p>
+            <ul class="project-list">
+                <li>Demand paging</li>
+                <li>LRU page replacement when memory is full</li>
+                <li>Page fault handling</li>
+                <li>Measuring TLB hit rate and page faults rate</li>
+            </ul>
+        </section>
+    </div>
+</section>

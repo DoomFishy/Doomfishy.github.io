@@ -1,8 +1,13 @@
-const app = document.getElementById("app");
-const navList = document.querySelectorAll(".nav-item a");
+const app = document.getElementById("preview");
+const preview = document.querySelectorAll(".previewable");
 
-navList.forEach(item =>{
-    item.addEventListener("click", change_page)
+preview.forEach(item =>{
+    item.addEventListener("click", change_preview)
+});
+
+app.addEventListener("click", function(){
+    app.innerHTML = "";
+    app.classList.add("hidden");
 });
 
 async function loadHtmlFile(filePath){
@@ -10,31 +15,26 @@ async function loadHtmlFile(filePath){
         const response = await fetch(filePath);
         const html = await response.text();
         app.innerHTML = html;
+        app.classList.remove("hidden");
     } catch(error){
         console.error("Error loading HTML:", error);
     }
 }
 
-function change_page(event){
-    const name = event.target.textContent;
-    console.log("CLICKED!", name);
+function change_preview(event){
+    const id = event.currentTarget.id;
 
-    if (name == "About"){
-        loadHtmlFile("about_page.html");
+    console.log("clicked ", id);
+
+    if (id == "preview-mmu"){
+        loadHtmlFile("project_previews/mmu.html");
     }
 
-    else if (name == "Projects"){
-        loadHtmlFile("project_page.html");
+    else if (id == "preview-cpu"){
+        loadHtmlFile("project_previews/cpu.html");
     }
 
-    else if (name == "Current"){
-        loadHtmlFile("current_page.html");
-    }
-    
-    else if (name == "Contact"){
-        loadHtmlFile("contact_page.html");
+    else if (id == "preview-labs"){
+        loadHtmlFile("project_previews/lab_sec.html");
     }
 }
-
-
-loadHtmlFile("about_page.html");
