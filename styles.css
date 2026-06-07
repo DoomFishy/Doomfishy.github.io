@@ -1,5 +1,6 @@
 body {
-    font-family: Poppins, sans-serif;
+    font-family: "Inter", sans-serif;    
+    font-weight: 500;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -27,6 +28,7 @@ hr {
     border: 0;
     flex-grow: 1;
 }
+
 
 #hr-green {
     background-color:#87ea00;
@@ -94,13 +96,11 @@ hr {
     align-items: center;
     gap: 2%;
     padding: 0 5rem;
-
 }
 
 .title h1 {
     color: #d9005f;
     font-size: clamp(0.2rem, 2.2vw, 5.6rem);
-
 }
 
 /* Navbar */
@@ -135,9 +135,9 @@ hr {
 #nav-list a {
     text-decoration: none;
     color: white;
+    font-size: clamp(1rem, 3vw, 1.55rem);
     font-weight: bold;
-    font-size: 1.55rem;
-    
+
     background-color: #d9005f;
     transition: 0.3s;
     display: inline-block;
@@ -166,9 +166,9 @@ hr {
 #contact-list a {
     text-decoration: none;
     color: white;
+    font-size: clamp(1rem, 3vw, 1.55rem);
     font-weight: bold;
-    font-size: 1.55rem;
-    
+
     background-color: #d9005f;
     transition: 0.3s;
     padding: clamp(1rem, 1.5vw, 2rem);
@@ -216,7 +216,6 @@ hr {
     justify-content: center;
     color: #00819f;
     max-width: 1400px;
-    animation: fadeIn 0.2s;
 }
 
 #description {
@@ -245,7 +244,6 @@ hr {
 .language-tile {
     text-align: center;
     color: #272728;
-    font-weight: bold;
 }
 
 .language-tile p {
@@ -373,15 +371,12 @@ hr {
     width: 50%;
     flex: 1;
     transition: 0.3s;
-
 }
 
 #preview-website:hover{
-    transform: translateY(-1%);
+    transform: translateY(-5%);
     transition: 0.3s;
 }
-
-
 
 #preview-website img {
     border: 0.3vw solid #ff7f00;
@@ -432,6 +427,8 @@ hr {
     margin: 5% auto;
     background-color: #fafafa;
     border-radius: 1rem;
+    line-height: 1.5;
+
     transition: 0.3s;
     cursor: pointer;
 }
@@ -459,7 +456,6 @@ hr {
     padding: 5%;
     text-align: left;
 
-    font-weight: lighter;
     font-size: clamp(0.6rem, 1.2vw, 1rem);
 }
 .project-tile-image {
@@ -525,8 +521,27 @@ hr {
     display: block;
 }
 
+#current-section {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+#current-description {
+    margin: 0 auto;
+    padding: 20%;
+}
+
+#current-description h1 {
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 6.25rem);
+}
 
 
 footer {
+    padding: 1%;
+    color: white;
     background-color: #d9005f;
+    border-top: 0.325rem solid #ff7f00;
+
 }
