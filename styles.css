@@ -88,13 +88,6 @@ hr {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .title {
     display: flex;
     flex-direction: row;
@@ -311,7 +304,8 @@ hr {
     flex-direction: row;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.864);
-    z-index: 2;
+    z-index: 1;
+    cursor: pointer;
 }
 
 #preview.hidden {
@@ -334,9 +328,10 @@ hr {
 
     background-color: #fafafa;
     border-radius: 1rem;
-
-    animation: fadeIn 0.6s;
-
+    
+    z-index: 1;
+    animation: fadeInUp 0.3s;
+    cursor: default;
 }
 
 #preview-title h1 {
@@ -372,7 +367,48 @@ hr {
     border-radius: 1rem;
     width: 100%;
     background-color: white;
-    
+}
+
+#preview-website {
+    width: 50%;
+    flex: 1;
+    transition: 0.3s;
+
+}
+
+#preview-website:hover{
+    transform: translateY(-1%);
+    transition: 0.3s;
+}
+
+
+
+#preview-website img {
+    border: 0.3vw solid #ff7f00;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+#preview-website-expanded {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    animation: fadeInUp 0.3s;
+}
+
+#preview-website-expanded.hidden {
+    display: none;
+}
+
+#preview-website-expanded iframe {
+    width: 100%;
+    height: 100%;
 }
 
 /* Projects */
@@ -384,11 +420,11 @@ hr {
 
 #project-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
     flex-direction: row;
     text-align: center;
-    margin: 0 10%;
+    margin: 0 1%;
 }
 
 .project-tile {
@@ -397,10 +433,11 @@ hr {
     background-color: #fafafa;
     border-radius: 1rem;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .project-tile:hover {
-    transform: translateY(-1%);
+    transform: translateY(-5%);
     transition: 0.3s;
 }
 
@@ -412,7 +449,7 @@ hr {
 }
 
 .project-tile-description {
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 7 / 8;
     margin: auto;
     transition: 0.3s;
 }
@@ -424,6 +461,16 @@ hr {
 
     font-weight: lighter;
     font-size: clamp(0.6rem, 1.2vw, 1rem);
+}
+.project-tile-image {
+    overflow: hidden;
+}
+
+.project-tile-image img {
+    width: 100%;
+    height: auto;
+    border: 2px black solid;
+
 }
 
 .project-list > li{
@@ -455,222 +502,31 @@ hr {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
-
-    .project-diagram-mmu {
-        float: none;
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
-    
-    .project-diagram-mmu > img {
-        width: 100%;
-        max-width: 30rem;
-    }
-
-    .project-diagram-cpu {
-        float: none;
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
-    
-    .project-diagram-cpu > img {
-        width: 100%;
-        max-width: 30rem;
-    }
-}
-
-#gamejam-container{
+#gamejam-container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding-left: 4%;
-}
+    grid-template-columns: 1fr 1fr 1fr;
 
-.gamejam-tile {
-    margin: 2%;
-    padding: 1%;
-
-    display: flex;
-    align-items: flex-start;
-}
-
-.gamejam-header {
-    flex-shrink: 0;
-    width: clamp(18.4rem, 24vw, 21.875rem);
-}
-
-.gamejam-image img:hover{
-    border: 0.8rem solid #ff7f00;
-    box-sizing: border-box;
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.gamejam-image img {
-    width: clamp(18.4rem, 24vw, 21.875rem);
-    height: auto;
-    border: 0.8rem solid #87ea00;
-    border-radius: 0.625rem;
-    box-sizing: border-box;
-    transition: 0.3s;
-}
-
-.gamejam-title{
-    font-weight: Bold;
-    color: #d9005f;
-    font-size: clamp(0.8rem, 5vw, 1.8rem);
-}
-
-.gamejam-tech{
-    color: #ff7f00;
-    font-size: clamp(0.6rem, 3vw, 1.2rem);
-    margin: 0;
-}
-
-.gamejam-description{
-    align-items: center;
-    text-align: left;
-    font-size: clamp(0.2rem, 3vw, 1.2rem);
-    padding-left: 2%;
-    color: #272728;
-}
-
-/* MOBILE LAYOUT - Image top, description bottom */
-@media (max-width: 48rem) {  /* 768px */
-    .gamejam-tile {
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem;
-    }
-    
-    .gamejam-image {
-        width: 100%;
-        max-width: 21.875rem;
-        margin-bottom: 1rem;
-    }
-    
-    .gamejam-description {
-        text-align: left;
-        padding-left: 0;
-    }
-    
-    .gamejam-title {
-        font-size: 1.5rem;
-    }
-    
-    .gamejam-tech {
-        font-size: 1rem;
-    }
-    
-    .gamejam-description p {
-        font-size: 1rem;
-    }
-}
-
-/* Current */
-
-#current_section{
-    animation: fadeIn 0.2s;
-}
-
-#current-section > h1{
-    font-size: clamp(1rem, 7vw, 2.8rem);
-    color:#00819f;
-    text-align: center;
-    animation: fadeIn 0.2s;
-}
-
-#current-section > p{
-    font-size: clamp(0.5rem, 4vw, 2.5rem);
-    color: #272728;
-    text-align: center;
-    animation: fadeIn 0.2s;
-}
-
-#current-images{
-    display: flex;
-}
-#img-2 > img,
-#img-1 > img{
-    width: 100%;
-    max-width: 30rem;
-    height: auto;
-    margin: 0;
-
-}
-
-
-
-/* Contact */
-
-#contact-section{
-    animation: fadeIn 0.2s;
-}
-
-#contacts {
-    text-align: center;
-    color: #00819f;
-    font-size: clamp(0.5rem, 8vw, 1.25rem);
-}
-
-#contacts > h1 {
-    font-size: clamp(2.5rem, 8vw, 3.2rem);
-}
-
-#contact-container {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
+    text-align: center;
+    margin: 0 10%;
 }
 
-.contact-tile a img{
-    transition: 0.3s;
-    width: 50%;
-    border-radius: 1rem;
-    margin: auto;
-    transition: 0.3s;
-}
-
-.contact-tile a img:hover{
-    transform: scale(1.3);
+.gamejam-tile-description {
+    aspect-ratio: 1.26 / 1;
+    border-radius: 5%;
+    overflow: hidden;
     transition: 0.3s;
 }
 
-/* Footer */
+.gamejam-tile-description img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 
 footer {
-    padding: 0.5%;
-    font-family: Poppins, sans-serif;
     background-color: #d9005f;
-    border-top: 0.313rem solid #00819f;
-}
-
-footer p {
-    color: #F4F7F5;
-    font-weight: bold;
-    text-align: right;
-}
-
-/* Tablet (768px - 1024px) */
-@media (max-width: 64rem) {
-    #project-container {
-        padding: 1rem 2rem;
-    }
-    
-    .gamejam-header {
-        width: auto;
-    }
-}
-
-
-@media (max-width: 48rem) {
-    #nav-list {
-        flex-wrap: wrap;
-    }
-
-    #nav-list a {
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
 }
