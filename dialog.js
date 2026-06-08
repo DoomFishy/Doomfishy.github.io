@@ -6,13 +6,20 @@ const preview_website = document.getElementById("preview-website");
 
 document.addEventListener("keydown", function(e) {
     if (e.key === "Escape" && !preview.classList.contains("hidden")) {
-        preview.classList.add("hidden");
+        preview.style.animation = "fadeOutDown 0.3s";
     }
 });
 
 preview.addEventListener("click", function(e){
     if (e.target === preview) {
+        preview.style.animation = "fadeOutDown 0.3s";
+    }
+});
+
+preview.addEventListener("animationend", (event) => {
+    if (event.animationName == "fadeOutDown"){
         preview.classList.add("hidden");
+        preview.style.animation = "";
     }
 });
 
