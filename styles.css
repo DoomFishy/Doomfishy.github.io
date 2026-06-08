@@ -177,18 +177,22 @@ hr {
 }
 
 .contact-item {
-    padding-right: 10%;
+    margin-right: 10%;
 }
 
 .contact-item img {
-    
     width: 100%;
-    max-width: 100px;
+    max-width: 60px;
     min-width: 20px;
-    background-color: #f7f7f7;
-    padding: 5%;
+
     border-radius: 6%;
     display: inline-block;
+    cursor: pointer;
+    transition: filter 0.1s;
+}
+
+.contact-item img:hover {
+    filter: brightness(0) invert(1);
 }
 
 
