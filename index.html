@@ -27,13 +27,19 @@
 
             <ul id="contact-list">
                 <li class="contact-item">
-                    <a href="#description-section" draggable="false">GIT</a>
+                    <a draggable="false">
+                        <img src="assets/logo/contact/contact-git_logo.png">
+                    </a>
                 </li>
                 <li class="contact-item">
-                    <a href="#projects" draggable="false">LINKED</a>
+                    <a draggable="false">
+                        <img src="assets/logo/contact/contact-linkedin_logo.png">
+                    </a>
                 </li>
                 <li class="contact-item">
-                    <a href="#projects" draggable="false">GMAIL</a>
+                    <a draggable="false">
+                        <img src="assets/logo/contact/contact-gmail_logo.png">
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -54,35 +60,39 @@
             <h1>/ About Me</h1>
             <hr id="hr-green">
         </section>
-
+    
         <div id="description">
-            <p>Third year Cybersecurity student at <img class="yu_logo" src="assets/logo/yorku_logo-remove-bg-io.png">
-                I learned CS fundamentals and Physical + Digital Security. <br>
-                Languages I use:
-            <div>
-                <div id="languages">
+            <p>Third year Cybersecurity student at <img class="yu_logo" src="assets/logo/general/yorku_logo.png">
+                I learned CS fundamentals and Physical + Digital Security.
+            </p>
 
+            <div id="languages">
+                <p>
+                    Languages I use:
+                </p>
+                <div id="language-container">
                     <div class="language-tile">
-                        <img class="java_logo" draggable="false" src="assets/logo/java_logo-remove-bg-io.png">
+                        <img class="java_logo" draggable="false" src="assets/logo/language/lang-java_logo.png">
                         <p>Java</p>
                     </div>
-
+                
                     <div class="language-tile">
-                        <img class="python_logo" draggable="false" src="assets/logo/python_logo-remove-bg-io.png">
+                        <img class="python_logo" draggable="false" src="assets/logo/language/lang-python_logo.png">
                         <p>Python</p>
                     </div>
 
                     <div class="language-tile">
-                        <img class="csharp_logo" draggable="false" src="assets/logo/no bg/csharp_logo.png">
+                        <img class="csharp_logo" draggable="false" src="assets/logo/language/lang-csharp_logo.png">
                         <p>C#</p>
                     </div>
 
                     <div class="language-tile">
-                        <img class="c_logo" draggable="false" src="assets/logo/no bg/c_logo.png">
+                        <img class="c_logo" draggable="false" src="assets/logo/language/lang-c_logo.png">
                         <p>C</p>
                     </div>
-                </div>
+                </div>                
             </div>
+          
             <p>
                 I learn the best by applying my knowledge,
                 in my free time, I create games, and small programs.
@@ -103,36 +113,63 @@
         <div id="project-container">
             <section id="preview-stego" class="project-tile previewable border-red">
                 <div class="project-tile-description">
-                    <h3>Simple <br> Steganography</h3>
+                    <div class="project-icons">
+                        <img src="assets/logo/general/project-self_orange.png">
+
+                        <div class="project-languages">
+                            <img src="assets/logo/language/lang-js_logo.png">
+                            <img src="assets/logo/language/lang-python_logo.png">
+                        </div>
+                    </div>
+
+                    <h3 class="text-blue">Simple <br> Steganography</h3>
                     <p>
                         Designed and implemented an simple image steganography program that uses ChaCha20 algorithm to randomize pixel locations.
                     </p>
-                    <p class="project-language">C</p>
                 </div>
             </section>
 
             <section id="preview-mmu" class="project-tile previewable border-blue">
                 <div class="project-tile-description">
-                    <h3>Memory Management Unit (MMU) Simulator</h3>
+                    <div class="project-icons">
+                        <img src="assets/logo/general/project-school_green.png">
+
+                        <div class="project-languages">
+                            <img src="assets/logo/language/lang-c_logo.png">
+                        </div>
+                    </div>
+
+                    <h3 class="text-orange">Memory Management Unit (MMU) Simulator</h3>
                     <p>
                         Designed and implemented an MMU Simulator in C that reads virtual addresses from a file,
                         translates them to
                         physical addresses using a TLB and Page Table
                     </p>
-                    <p class="project-language">C</p>
                 </div>
             </section>
 
             <section id="preview-cpu" class="project-tile previewable border-green">
                 <div class="project-tile-description">
-                    <h3>CPU Scheduling Simulator</h3>
+                    <div class="project-icons">
+                        <img src="assets/logo/general/project-school_blue.png">
+
+                        <div class="project-languages">
+                            <img src="assets/logo/language/lang-c_logo.png">
+                        </div>
+                    </div>
+
+                    <h3 class="text-red">CPU Scheduling Simulator</h3>
                     <p>Implemented 5 CPU scheduling algorithms. FCFS, Round Robin, Priority Queue, Hybrid Scheduling</p>
                 </div>
             </section>
 
             <section id="preview-labs" class="project-tile previewable border-orange">
                 <div class="project-tile-description">
-                    <h3>University Cybersecurity Labs</h3>
+                    <div class="project-icons">
+                        <img src="assets/logo/general/project-school_red.png">
+                    </div>
+
+                    <h3 class="text-blue">University Cybersecurity Labs</h3>
                     <p>Completed a series of ethical hacking and security labs in an academic lab environment</p>
                 </div>
             </section>
@@ -143,14 +180,14 @@
                 <div class="gamejam-tile-description border-blue">
                     <img draggable="false" src="https://github.com/GDYUClub/term-project-w25/blob/main/assets/sprites/title-screen/CitizenJaneLogo_1.png?raw=true">
                 </div>
-                <h3>York University GDYU W25</h3>
+                <h3 class="text-orange">York University W25</h3>
             </section>
 
             <section id="preview-greaseTrap" class="project-tile previewable">
                 <div class="gamejam-tile-description border-green">
                     <img draggable="false" src="https://img.itch.zone/aW1nLzIzNjQzMzM4LmpwZw==/315x250%23c/DezaXD.jpg">
                 </div>
-                <h3>Grease Trap</h3>
+                <h3 class="text-red">Grease Trap</h3>
 
             </section>
 
@@ -158,7 +195,7 @@
                 <div class="gamejam-tile-description border-red">
                     <img draggable="false" src="https://img.itch.zone/aW1nLzE5NjIwNDYyLmpwZw==/315x250%23c/%2F3kjdY.jpg">
                 </div>
-                <h3>All Bullets No Bite!</h3>
+                <h3 class="text-blue">All Bullets No Bite!</h3>
             </section>
         </div>
     </section>
@@ -170,7 +207,7 @@
         </section>
 
         <div id="current-description">
-            <h1>Currently working on learning how to make a local AI</h1>
+            <h1 class="text-blue">Currently working on learning how to make a local AI</h1>
         </div>
     </section>
 
