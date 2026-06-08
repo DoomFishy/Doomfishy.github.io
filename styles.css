@@ -182,7 +182,7 @@ hr {
 
 .contact-item img {
     width: 100%;
-    max-width: 60px;
+    max-width: 80px;
     min-width: 20px;
 
     border-radius: 6%;
@@ -350,8 +350,24 @@ hr {
     cursor: default;
 }
 
+#preview-title {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+}
+
 #preview-title h1 {
     font-size: clamp(0.6rem, 2vw, 1.25rem);
+    margin: 0;
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+#preview-title img {
+    width: 10%;
+    grid-column: 3 / 4;
+    justify-self: end;
 }
 
 #preview-content-row {
@@ -481,16 +497,29 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 2%;
+    margin: 1% 2%;
 }
 
 .project-icons img {
     width: 20%;
 }
 
+.project-git {
+    text-align: right;
+    margin: 0 2%;
+}
+
+.project-git img  {
+    width: 15%;
+}
+
+.project-git img:hover  {
+    content: url("assets/logo/contact/contact-git_logo-blue.png");
+}
+
 .project-languages {
     text-align: right;
-    padding: 0 2%;
+    margin: 0 2%;
 }
 
 .project-languages img {
