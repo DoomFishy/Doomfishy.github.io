@@ -538,8 +538,10 @@ hr {
     margin: 1% 2%;
 }
 
-.project-icons img {
-    width: 20%;
+.project-icons > img:first-child {
+    width: clamp(1.875rem, 20%, 5rem);
+    height: auto;
+    flex-shrink: 0;
 }
 
 .project-git {
@@ -557,12 +559,16 @@ hr {
 }
 
 .project-languages {
-    text-align: right;
-    margin: 0 2%;
+    display: flex;
+    gap: clamp(0.3125rem, 1vw, 0.9375rem);
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .project-languages img {
-    width: 20%;
+    width: clamp(1.25rem, 4vw, 2.1875rem);
+    height: auto;
+    display: inline-block;
 }
 
 .project-tile-image {
