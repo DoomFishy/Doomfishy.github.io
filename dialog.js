@@ -68,6 +68,10 @@ function change_preview(event){
     else if (id == "preview-abnb"){
         loadHtmlFile("project_previews/abnb.html");
     }
+
+    else if (id == "preview-multiAI"){
+        loadHtmlFile("project_previews/multiAI.html");
+    }
 }
 
 function open_website() {
