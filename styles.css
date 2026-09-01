@@ -889,7 +889,7 @@ hr {
 @media (max-width: 768px) {
     #current-description {
         margin: 0 auto;
-        padding: 30% 0;
+        padding: 50% 10%;
         
     }
 
@@ -897,6 +897,7 @@ hr {
         text-align: center;
         font-size: clamp(1rem, 3vw, 6.25rem);
         color: #ccd6f6;
+        line-height: 2rem;
     }
 
 }
