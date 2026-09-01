@@ -202,9 +202,10 @@ hr {
     list-style: none;
     display: flex;
     
-    gap: 10px;
+    gap: 50px;
     padding: 0;
     margin: 0;
+    padding-right: 2%;
 }
 
 
@@ -223,7 +224,7 @@ hr {
 
 .contact-item img {
     width: clamp(28px, 5vw, 80px);
-    max-width: 80px;
+    max-width: 60px;
     min-width: 20px;
     border-radius: 6%;
     cursor: pointer;
