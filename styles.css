@@ -1,4 +1,10 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     font-family: "Inter", sans-serif;    
     font-weight: 500;
     margin: 0;
@@ -9,7 +15,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
+    overflow-x: hidden
 }
 
 main{
@@ -78,6 +84,9 @@ hr {
     color: #ff7f00;
 }
 
+
+/* Animations */
+
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -116,26 +125,37 @@ hr {
     opacity: 0;
 }
 
+/* ============================================
+            TITLE SECTION (shared)
+   ============================================ */
+
 .title {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2%;
-    padding: 0 5rem;
+    padding: 0 1.5rem;
+    padding-top: 10%;
+
 }
 
 .title h1 {
     color: #FF6C00;
-    font-size: clamp(0.2rem, 2.2vw, 5.6rem);
+    font-size: clamp(1.3rem, 3vw, 2.5rem);
+    white-space: nowrap;
 }
 
-/* Navbar */
+/* ============================================
+                Top Navigation Bar
+   ============================================ */
 
 #navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 
+    align-items: center;
+    
     width: 100%;
     height: auto;
     
@@ -146,11 +166,13 @@ hr {
 #nav-list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 
     padding: 0;
     margin: 0;
 
     align-items: center;
+    gap: 0.25rem;
 }
 
 .nav-item {
@@ -161,13 +183,14 @@ hr {
 #nav-list a {
     text-decoration: none;
     color: #ccd6f6;
-    font-size: clamp(1rem, 3vw, 1.55rem);
+
+    font-size: clamp(0.875rem, 2.5vw, 1.55rem);
     font-weight: bold;
 
     /*background-color: #d9005f;*/
     transition: 0.3s;
     display: inline-block;
-    padding: clamp(1rem, 1.5vw, 2rem);
+    padding: clamp(1.68rem, 1vw, 2rem);
 }
 
 #nav-list a:hover {
@@ -178,24 +201,31 @@ hr {
 #contact-list {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 15px;
-
+    
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
 
+
 .contact-item {
-    margin-right: 10%;
+    display: flex;
+    align-items: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-item {
+        display: none;
+        margin-right: 0;
+    }
 }
 
 .contact-item img {
-    width: 100%;
+    width: clamp(28px, 5vw, 80px);
     max-width: 80px;
     min-width: 20px;
-
     border-radius: 6%;
-    display: inline-block;
     cursor: pointer;
     transition: filter 0.1s;
 }
@@ -205,9 +235,13 @@ hr {
 }
 
 
+/* ============================================
+                Welcome Section
+   ============================================ */
 
-/* Welcome */
-#welcome-section{
+
+
+#welcome-section {
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -215,30 +249,51 @@ hr {
     max-width: 1400px;
     min-width: 300px;
     width: 100%;
-    margin: 10% 0;
+
+    margin: 10% 10%;
+    padding: 0 1.5rem;
 
     color: #ccd6f6a4;
     animation: fadeIn 0.2s;
 }
 
-#welcome-section > h1{
-    text-align: left;
-    font-size: clamp(2rem, 8vw, 6.25rem);
-    margin: 0 10%;
-    color: #ccd6f6;
+/* MOBILE */
+@media (max-width: 768px) {
+    #welcome-section{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
 
+        max-width: 1400px;
+        min-width: 300px;
+        width: 100%;
+        
+        margin: 40% 10%;
+        padding: 0 1.5rem;
+        color: #ccd6f6a4;
+        animation: fadeIn 0.2s;
+    }
+}
+
+#welcome-section > h1 {
+    text-align: left;
+    font-size: clamp(2.5rem, 10vw, 6.25rem);
+    margin: 0;
+    color: #ccd6f6;
 }
 
 #introduction {
     display: flex;
     align-items: center;
-    font-size: clamp(0.6rem, 2vw, 1.25rem);
-
-    margin: 0 10%;
-    width: 30%;
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
 }
 
-/* Description */
+/* ============================================
+                About Section
+   ============================================ */
 #about-section{
     margin: 0 auto;
     justify-content: center;
@@ -250,12 +305,12 @@ hr {
     align-items: center;
     width: 75%;
 
-    margin: auto;
+    margin: 2% auto;
 }
 
 #description p {
     line-height: 2.5rem;
-    font-size: clamp(0.6rem, 2vw, 1.25rem);
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
 }
 
 #languages {
@@ -264,24 +319,42 @@ hr {
     margin: 0 5%;
 }
 
+@media (max-width: 768px) {
+    #description p {
+        line-height: 1.8rem;
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
+    }
+
+    #languages {
+        color: #8b9aba;
+        font-weight: bold;
+        margin: 10% 5%;
+    }
+}
+
 #language-container {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1%;
-    margin: 0 10%;
+    margin: 1rem 0;
 }
 
 .language-tile {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5%;
+    gap: 0.75rem;
 }
 
 .language-tile img {
-    width: 25%;
+    width: clamp(40px, 15vw, 80px);
+    height: auto;
+    flex-shrink: 0;
 }
+
+
+/* Logo Overides */
 
 .yu_logo{
     width: clamp(2rem, 3vw, 5rem);
@@ -321,7 +394,9 @@ hr {
     height: auto;
 }
 
-/* Dialog */
+/* ============================================
+            Preview Dialog Section
+   ============================================ */
 
 #preview {
     width: 100%;
@@ -351,7 +426,7 @@ hr {
     max-height: 80%;
     color: #ccd6f6;
 
-    padding: 2%;
+    padding: 5%;
 
     background-color: #282D4F;
     border-radius: 1rem;
@@ -376,32 +451,10 @@ hr {
     margin-bottom: 10%;
 }
 
-#preview-title a {
-    grid-column: 3 / 4;
-    justify-self: end;
-    padding: 0;
-    margin: auto;
-    text-align: right;
-}
-
 #preview-title img {
     width: 10%;
     cursor: pointer;
     transition: 0.3s;
-}
-
-#preview-title img:hover {
-    content: url("assets/logo/contact/contact-git_logo-green.png");
-}
-
-#preview-content-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.has-preview-images {
-    padding: 0 2%;
-    width: 50%;
 }
 
 #preview-tech {
@@ -413,6 +466,14 @@ hr {
     line-height: 1.5;
     color: #8b9aba;
 }
+
+#preview-paragraph .project-list{
+    font-size: clamp(0.1rem, 1vw, 1rem);
+    padding: 5%;
+    line-height: 1.5;
+    color: #8b9aba;
+}
+
 
 #preview-features {
     font-size: clamp(0.1rem, 1vw, 1rem);
@@ -426,28 +487,26 @@ hr {
     color: #8b9aba;
 }
 
-#preview-thumbnail {
-    width: 40%;
-}
-
 #preview-thumbnail img {
-    border: 0.3vw solid #23103A;
     border-radius: 1rem;
     width: 100%;
     transition: 0.3s;
     cursor: pointer;
 }
 
-#preview-thumbnail img.has-git {
-    border: none;
-    width: 50%;
-    transition: 0.3s;
-    cursor: pointer;
+#preview-thumbnail {
+    width: 40%;
 }
 
-#preview-thumbnail img.has-git:hover {
+.has-preview-images {
+    padding: 0 2%;
+    width: 50%;
+}
+
+#preview-title img:hover {
+    content: url("assets/logo/contact/contact-git_logo-green.png");
     transform: translateY(-5%);
-    content: url("assets/logo/contact/contact-git_logo-blue.png")
+    transition: 0.3s;
 }
 
 #preview-website {
@@ -456,13 +515,124 @@ hr {
     transition: 0.3s;
 }
 
+#preview-content-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+
+    #preview-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        width: 75%;
+        height: 75%;
+        color: #ccd6f6;
+
+        background-color: #282D4F;
+        border-radius: 1rem;
+        
+        z-index: 1;
+        animation: fadeInUp 0.3s;
+        cursor: default;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #preview-title h1 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+        margin: 0;
+        grid-column: 2 / 3;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    #preview-title img {
+        width: 70%;
+    }    
+
+    #preview-title img:hover {
+        content: url("assets/logo/contact/contact-git_logo-green.png");
+        transform: translateY(-5%);
+        transition: 0.3s;
+    }
+
+    #preview-content-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #preview-tech {
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        margin-bottom: 5%;
+    }
+
+    #preview-paragraph {
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        line-height: 1.5;
+        
+        color: #8b9aba;
+    }
+
+    #preview-paragraph .project-list {
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        line-height: 1.5;
+        
+        color: #8b9aba;
+    }
+
+    #preview-thumbnail {
+        display: none;
+    }
+
+    .has-preview-images {
+        padding: 0 8%;
+        width: 100%;
+    }
+
+    #preview-features {
+        line-height: 1.5;
+        padding-top: 5%;
+        margin: 0 auto;
+        color: #ccd6f6;
+    }
+
+    #preview-features p {
+        font-size: clamp(1rem, 1vw, 1rem);
+
+    }
+
+    #preview-features .project-list{
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        line-height: 1.5;
+        padding-left: 5%;
+        color: #8b9aba;
+    }
+    
+    #preview-website {
+        display: none;
+    }
+
+}
+
+
+#preview-title a {
+    grid-column: 3 / 4;
+    justify-self: end;
+    padding: 0;
+    margin: auto;
+    text-align: right;
+}
+
 #preview-website:hover{
     transform: translateY(-5%);
     transition: 0.3s;
 }
 
 #preview-website img {
-    border: 0.3vw solid #23103A;
     border-radius: 1rem;
     width: 100%;
     height: 100%;
@@ -491,8 +661,9 @@ hr {
     height: 100%;
 }
 
-/* Projects */
-
+/* ============================================
+                Project Section
+   ============================================ */
 #project-section {
     margin: 0 auto;
     max-width: 1400px;
@@ -507,16 +678,28 @@ hr {
     width: 75%;
 }
 
-
 .project-tile {
     margin: 5% 15%;
     background-color: #30365e;
+    border: 0.3rem solid #23103A;
     border-radius: 1rem;
     line-height: 1.5;
 
     transition: 0.3s;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    #project-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
 
 .project-tile:hover {
     transform: translateY(-3%);
@@ -525,7 +708,7 @@ hr {
 
 
 .project-tile h3 {
-    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.25rem);
     font-weight: bold;
     margin: auto;
     padding: 5%;
@@ -543,7 +726,7 @@ hr {
     padding: 5%;
     text-align: left;
 
-    font-size: clamp(0.6rem, 1.2vw, 1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .project-icons {
@@ -554,7 +737,7 @@ hr {
 }
 
 .project-icons > img:first-child {
-    width: clamp(1.875rem, 20%, 5rem);
+    width: clamp(2rem, 1.5vw, 5rem);
     height: auto;
     flex-shrink: 0;
 }
@@ -581,7 +764,7 @@ hr {
 }
 
 .project-languages img {
-    width: clamp(1.25rem, 4vw, 2.1875rem);
+    width: clamp(2.25rem, 4vw, 2.1875rem);
     height: auto;
     display: inline-block;
 }
@@ -624,10 +807,22 @@ hr {
 #gamejam-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
+    
     flex-direction: row;
     text-align: center;
     margin: 0 10%;
+}
+
+@media (max-width: 768px) {
+
+    #gamejam-container {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        flex-direction: row;
+        text-align: center;
+        margin: 0 10%;
+    }
 }
 
 .gamejam-tile {
@@ -662,11 +857,16 @@ hr {
 }
 
 .gamejam-tile-description img {
+    border: 0.3rem solid #23103A;
+    border-radius: 1rem;
+
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
+
+
 
 #current-section {
     margin: 0 auto;
@@ -685,10 +885,37 @@ hr {
     color: #ccd6f6;
 }
 
+@media (max-width: 768px) {
+    #current-description {
+        margin: 0 auto;
+        padding: 30% 0;
+        
+    }
+
+    #current-description h1 {
+        text-align: center;
+        font-size: clamp(1rem, 3vw, 6.25rem);
+        color: #ccd6f6;
+    }
+
+}
+
 
 footer {
     padding: 1%;
     color: #ccd6f6;
     background-color: #A0204C;
     border-top: 0.325rem solid #FF6C00;
+}
+
+@media (max-width: 768px) {
+
+
+    footer {
+        padding: 1%;
+        color: #ccd6f6;
+        background-color: #A0204C;
+        border-top: 0.2rem solid #FF6C00;
+        font-size: clamp(0.5rem, 3vw, 6.25rem);
+    }
 }
