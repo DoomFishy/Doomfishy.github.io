@@ -18,8 +18,14 @@ html, body {
     overflow-x: hidden
 }
 
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #4a5178 #1f2340;
+}
+
 main{
     flex: 1;
+
 }
 
 a {
@@ -427,6 +433,9 @@ hr {
     max-height: 80%;
     color: #ccd6f6;
 
+    overflow-y: auto;
+    
+
     padding: 5%;
 
     background-color: #282D4F;
@@ -435,7 +444,12 @@ hr {
     z-index: 1;
     animation: fadeInUp 0.3s;
     cursor: default;
+
+    scrollbar-width: thin;
+    scrollbar-color: #4a5178 #1f2340;
 }
+
+
 
 #preview-title {
     display: grid;
@@ -541,6 +555,9 @@ hr {
 
         overflow-y: auto;
         overflow-x: hidden;
+
+        scrollbar-width: thin;
+        scrollbar-color: #4a5178 #1f2340;
     }
 
     #preview-title h1 {

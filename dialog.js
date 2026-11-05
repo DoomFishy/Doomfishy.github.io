@@ -66,6 +66,9 @@ function change_preview(event){
         case "input-game-AllBulletsNoBite":
             loadHtmlFile("project_previews/game_AllBulletsNoBite.html");
             break;
+        case "input-writeup-PasswordProfiler":
+            loadHtmlFile("project_previews/write_PasswordProfiler.html");
+            break;
         default:
             break;
     }
