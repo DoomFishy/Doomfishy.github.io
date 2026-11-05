@@ -1,0 +1,54 @@
+<section id="preview-container" class="border-blue">
+
+    <div id="preview-title">
+        <h1>Redaction Gone Wrong</h1>
+    </div>
+    
+    <div id="preview-content-row">
+
+        <section id="preview-description">
+            <div id="preview-tech">
+                <p> <em> picoCTF | Forensics </em> </p>
+            </div>
+
+            <br>
+
+            <div id="preview-paragraph">
+                <p>
+                    Given a file containing a redacted document. Goal: recover the hidden information.
+                </p>
+
+                <br>
+
+                <p>
+                    The black box appeared to be a drawn overlay rather than a true redaction.
+                    I hypothesized that the text was still present in the file's text layer,
+                    since redaction is often done by drawing a rectangle over the text—which removes nothing and only hides it visually.
+                </p>
+
+                <br>
+
+                <p>
+                    I opened the PDF in a browser and used the element inspector over the black box area,
+                    looking for text behind the rectangle. The hidden text was present in the DOM and readable.
+                </p>
+
+                <br>
+
+                <p>
+                    The recovered text contained the flag in the expected format.
+                    I also highlighted across the black box and copied it, and the pasted text matched.
+                    The two independent methods gave the same result.
+                </p>
+
+                <br>
+
+                <p>
+                    Visual redaction is not data removal.
+                    Always verify where the underlying data actually resides rather than trusting the presentation layer.
+                </p>
+
+            </div>
+        </section>
+    </div>
+</section>

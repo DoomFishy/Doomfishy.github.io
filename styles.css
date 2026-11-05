@@ -787,6 +787,7 @@ hr {
     display: flex;
     gap: clamp(0.3125rem, 1vw, 0.9375rem);
     align-items: center;
+    padding-right: 0.2rem;
     flex-shrink: 0;
 }
 

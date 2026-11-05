@@ -69,6 +69,9 @@ function change_preview(event){
         case "input-writeup-PasswordProfiler":
             loadHtmlFile("project_previews/write_PasswordProfiler.html");
             break;
+        case "input-writeup-RedactionGoneWrong":
+            loadHtmlFile("project_previews/write_RedactionGoneWrong.html");
+            break;
         default:
             break;
     }
