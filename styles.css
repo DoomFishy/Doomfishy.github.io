@@ -468,7 +468,7 @@ hr {
     color: #8b9aba;
 }
 
-#preview-paragraph .project-list{
+#preview-paragraph .info-card-list{
     font-size: clamp(0.1rem, 1vw, 1rem);
     padding: 5%;
     line-height: 1.5;
@@ -482,7 +482,7 @@ hr {
     color: #ccd6f6;
 }
 
-#preview-features .project-list{
+#preview-features .info-card-list{
     font-size: clamp(0.1rem, 1vw, 1rem);
     line-height: 1.5;
     color: #8b9aba;
@@ -578,7 +578,7 @@ hr {
         color: #8b9aba;
     }
 
-    #preview-paragraph .project-list {
+    #preview-paragraph .info-card-list {
         font-size: clamp(0.8rem, 1vw, 1rem);
         line-height: 1.5;
         
@@ -606,7 +606,7 @@ hr {
 
     }
 
-    #preview-features .project-list{
+    #preview-features .info-card-list{
         font-size: clamp(0.8rem, 1vw, 1rem);
         line-height: 1.5;
         padding-left: 5%;
@@ -662,15 +662,24 @@ hr {
     height: 100%;
 }
 
+
+
 /* ============================================
                 Project Section
    ============================================ */
+   
+
+
+/* ============================================
+                Project Section
+   ============================================ */
+
 #project-section {
     margin: 0 auto;
     max-width: 1400px;
 }
 
-#project-container {
+#info-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
@@ -679,7 +688,7 @@ hr {
     width: 75%;
 }
 
-.project-tile {
+.info-card {
     margin: 5% 15%;
     background-color: #30365e;
     border: 0.3rem solid #23103A;
@@ -691,7 +700,7 @@ hr {
 }
 
 @media (max-width: 768px) {
-    #project-container {
+    #info-card-container {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
@@ -702,13 +711,13 @@ hr {
 }
 
 
-.project-tile:hover {
+.info-card:hover {
     transform: translateY(-3%);
     transition: 0.3s;
 }
 
 
-.project-tile h3 {
+.info-card h3 {
     font-size: clamp(1.2rem, 2.5vw, 1.25rem);
     font-weight: bold;
     margin: auto;
@@ -716,96 +725,96 @@ hr {
     color: #ccd6f6;
 }
 
-.project-tile-description {
+.info-card-body {
     aspect-ratio: 7 / 8;
     margin: auto;
     transition: 0.3s;
     color: #8b9aba;
 }
 
-.project-tile-description p {
+.info-card-body p {
     padding: 5%;
     text-align: left;
 
     font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
-.project-icons {
+.info-card-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1% 2%;
 }
 
-.project-icons > img:first-child {
+.info-card-icons > img:first-child {
     width: clamp(2rem, 1.5vw, 5rem);
     height: auto;
     flex-shrink: 0;
 }
 
-.project-git {
+.info-card-git {
     text-align: right;
     margin: 0 2%;
     z-index: 3;
 }
 
-.project-git img  {
+.info-card-git img  {
     width: 15%;
 }
 
-.project-git img:hover  {
+.info-card-git img:hover  {
     content: url("assets/logo/contact/contact-git_logo-blue.png");
 }
 
-.project-languages {
+.info-card-languages {
     display: flex;
     gap: clamp(0.3125rem, 1vw, 0.9375rem);
     align-items: center;
     flex-shrink: 0;
 }
 
-.project-languages img {
+.info-card-languages img {
     width: clamp(2.25rem, 4vw, 2.1875rem);
     height: auto;
     display: inline-block;
 }
 
-.project-tile-image {
+.info-card-image {
     overflow: hidden;
 }
 
-.project-tile-image img {
+.info-card-image img {
     width: 100%;
     height: auto;
     border: 2px rgb(155, 28, 28) solid;
 }
 
-.project-list > li{
+.info-card-list > li{
     padding-bottom: 1.5%;
 }
 
-.project-diagram-mmu {
+.info-card-diagram-mmu {
     float: right;
 }
 
-.project-diagram-mmu > img {
+.info-card-diagram-mmu > img {
     width: 20rem;
     height: auto;
     object-fit: contain;
 }
 
-.project-diagram-cpu{
+.info-card-diagram-cpu{
     float: right;
 
 }
 
-.project-diagram-cpu > img {
+.info-card-diagram-cpu > img {
     width: 30rem;
     height: auto;
     object-fit: contain;
 }
 
-#gamejam-container {
+#thumb-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
@@ -816,7 +825,7 @@ hr {
 
 @media (max-width: 768px) {
 
-    #gamejam-container {
+    #thumb-card-container {
         display: grid;
         grid-template-columns: 1fr;
 
@@ -826,7 +835,7 @@ hr {
     }
 }
 
-.gamejam-tile {
+.thumb-card {
     width: 65%;
     margin: 5% auto;
     border-radius: 1rem;
@@ -836,13 +845,13 @@ hr {
     cursor: pointer;
 }
 
-.gamejam-tile:hover {
+.thumb-card:hover {
     transform: translateY(-3%);
     transition: 0.3s;
 }
 
 
-.gamejam-tile h3 {
+.thumb-card h3 {
     font-size: clamp(0.875rem, 2vw, 1.25rem);
     font-weight: bold;
     margin: auto;
@@ -850,14 +859,14 @@ hr {
     color: #ccd6f6;
 }
 
-.gamejam-tile-description {
+.thumb-card-media {
     aspect-ratio: 1.26 / 1;
     border-radius: 5%;
     overflow: hidden;
     transition: 0.3s;
 }
 
-.gamejam-tile-description img {
+.thumb-card-media img {
     border: 0.3rem solid #23103A;
     border-radius: 1rem;
 

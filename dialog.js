@@ -41,37 +41,35 @@ async function loadHtmlFile(filePath){
 function change_preview(event){
     const id = event.currentTarget.id;
 
-    if (id == "preview-mmu"){
-        loadHtmlFile("project_previews/mmu.html");
+    switch (id) {
+        case "input-project-MultiAgentAI":
+            loadHtmlFile("project_previews/project_MultiAgentAI.html");
+            break;
+        case "input-project-PDFSteganography":
+            loadHtmlFile("project_previews/project_Steganography.html");
+            break;
+        case "input-project-MMU":
+            loadHtmlFile("project_previews/project_MMU.html");
+            break;
+        case "input-project-CPU":
+            loadHtmlFile("project_previews/project_CPU.html");
+            break;
+        case "input-project-CSECLabs":
+            loadHtmlFile("project_previews/project_CSECLab.html");
+            break;
+        case "input-game-YU2025":
+            loadHtmlFile("project_previews/game_YU2025.html");
+            break;
+        case "input-game-GreaseTrap":
+            loadHtmlFile("project_previews/game_GreaseTrap.html");
+            break;
+        case "input-game-AllBulletsNoBite":
+            loadHtmlFile("project_previews/game_AllBulletsNoBite.html");
+            break;
+        default:
+            break;
     }
 
-    else if (id == "preview-cpu"){
-        loadHtmlFile("project_previews/cpu.html");
-    }
-
-    else if (id == "preview-labs"){
-        loadHtmlFile("project_previews/lab_sec.html");
-    }
-
-    else if (id == "preview-stego"){
-        loadHtmlFile("project_previews/stego.html");
-    }
-
-    else if (id == "preview-yu2025"){
-        loadHtmlFile("project_previews/yu_game.html");
-    }
-
-    else if (id == "preview-greaseTrap"){
-        loadHtmlFile("project_previews/grease_trap.html");
-    }
-
-    else if (id == "preview-abnb"){
-        loadHtmlFile("project_previews/abnb.html");
-    }
-
-    else if (id == "preview-multiAI"){
-        loadHtmlFile("project_previews/multiAI.html");
-    }
 }
 
 function open_website() {
