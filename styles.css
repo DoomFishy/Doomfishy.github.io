@@ -401,6 +401,15 @@ hr {
     height: auto;
 }
 
+#example-console {
+    width: 100%;
+    height: auto;
+    margin: 2% auto;
+    background-color: #1f2340;
+    border-radius: 0.3rem;    
+}
+
+
 /* ============================================
             Preview Dialog Section
    ============================================ */
@@ -478,8 +487,13 @@ hr {
 
 #preview-paragraph {
     font-size: clamp(0.1rem, 1vw, 1rem);
-    line-height: 1.5;
+    line-height: 1.8;
     color: #8b9aba;
+}
+
+#preview-paragraph h3 {
+    line-height: 1.8;
+    color: #ccd6f6;
 }
 
 #preview-paragraph .info-card-list{

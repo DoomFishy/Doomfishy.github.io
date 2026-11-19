@@ -1,0 +1,99 @@
+<section id="preview-container" class="border-blue">
+
+    <div id="preview-title">
+        <h1>Password Profiler</h1>
+    </div>
+    
+    <div id="preview-content-row">
+
+        <section id="preview-description">
+            <div id="preview-tech">
+                <p> <em> picoCTF | General Skills </em> </p>
+            </div>
+
+            <br>
+
+            <div id="preview-paragraph">
+                <p>
+                    <h3>Given</h3>
+
+                    Given a compressed disk image. <code class="text-red">partition4.img</code>
+                </p>
+
+
+
+                <br>
+
+                <p>
+                    <h3>Attempt</h3>
+
+                    The file was in a raw disk image format, so I first tried to use fdisk to inspect its partition table, 
+                    but it failed as the image did not present a standard partition layout that fdisk 
+                    could parse. I then researched how to inspect a raw disk image format without mounting it, 
+                    but the answers I found were inconsistent about whether the image could be inspected 
+                    without mounting.
+
+                </p>
+
+                <br>
+
+                <p>
+                    <h3>Solution</h3>
+
+                    To check whether if I am on the right track, I revealed the challenge hint #1, which pointed to 
+                    building a Sleuth Kit MAC timeline. I installed Sleuth Kit and read the documentation, where I saw 
+                    that fls is used to extract the file system metadata, and mactime is used to convert the metadata 
+                    into a readable timeline.
+
+                </p>
+
+                <br>
+
+                <p>
+                    I ran <code class="text-orange">fls -m / -r partition.img > body.txt</code> 
+                    The output was a file with a structured list of 
+                    inode, permissions, timestamps, and paths, the output was not sorted chronologically. 
+                    I then ran mactime on body.txt to produce a proper timeline.
+
+                </p>
+
+                <div id="example-console" class="border-blue">
+                    <code class="text-green">
+                        fls -m / -r partition.img > body.txt <br>
+                        mactime -b body.txt -d > read.txt <br>
+                    </code>
+
+
+                </div>
+
+                <br>
+
+                <p>
+                    Scanning the timeline, I noticed one timestamp dated 1985
+
+                    <div id="example-console" class="border-blue">
+                        <code class="text-green">
+                            Date,Size,Type,Mode,UID,GID,Meta,File Name <br>
+                            Tue Jan 01 1985 12:00:00,41,macb,r/rrw-r--r--,0,0,4945,"/bin/bcab" <br>
+                            Mon Oct 18 2021 13:54:17,451,ma..,r/rrw-r--r--,0,0,64994,"/usr/share/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub"
+                        </code>
+                    </div>
+
+                    while the rest of the file system was in between 2021 and 2025. 
+                    A 1985 timestamp is impossible for a file system created decades later. 
+                    This is called timestomping, where an attacker hide a file from routine analysis. 
+                    The anomaly pointed to <code class="text-red">/bin/bcab"</code> (inode 4945).
+                    
+                    <br>
+                    <br>
+
+                    I used <code class="text-blue">icat partition.img 4945 > extract</code> 
+                    to extract the file contents, which were base64-encoded, decoding the file produced the flag.
+                
+                    
+                </p>
+
+            </div>
+        </section>
+    </div>
+</section>

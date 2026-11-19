@@ -72,6 +72,9 @@ function change_preview(event){
         case "input-writeup-RedactionGoneWrong":
             loadHtmlFile("project_previews/write_RedactionGoneWrong.html");
             break;
+        case "input-writeup-Timeline0":
+            loadHtmlFile("project_previews/write_Timeline0.html");
+            break;
         default:
             break;
     }
