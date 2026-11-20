@@ -407,6 +407,7 @@ hr {
     margin: 2% auto;
     background-color: #1f2340;
     border-radius: 0.3rem;    
+    word-break: break-all;
 }
 
 
